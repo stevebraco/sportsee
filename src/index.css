@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.recharts-rectangle {
+  border-radius: 50% !important;
+  background-color: red !important;
+  stroke-width: 59 !important;
+        stroke-linecap: round !important;
+}

@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+ul {
+  list-style: none;
+}
+button,
+input,
+select {
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+iframe {
+  border: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 41px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.welcome {
+  padding-top: 68px;
+  margin-bottom: 77px;
+}
+.welcome__para {
+  font-size: 18px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-chart {
   display: flex;
-  flex-direction: column;
+  gap: 30px;
+}
+.nutriment {
+  display: flex;
+  gap: 24px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #fbfbfb;
+  width: 258px;
+  height: 124px;
+  margin-bottom: 39px;
+}
+.nutriment:not(:last-child) {
+  margin-bottom: 20px;
+}
+.nutriment__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.nutriment__number {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.nutriment__name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #74798c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.test-flex {
+  display: flex;
+  gap: 31px;
 }
