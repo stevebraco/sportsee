@@ -1,0 +1,97 @@
+import React from "react";
+import {
+  ResponsiveContainer,
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { ContainerStyles } from "./BarChartStyles";
+import {
+  CustomizedCursor,
+  CustomizedLegend,
+  dataBarChart,
+  tooltipContentStyle,
+  tooltipFormatter,
+  tooltipItemStyle,
+  tooltipLabelStyle,
+} from "./BarChartUtils";
+
+const SimpleBarChart = ({ userActivity }) => {
+  const data = dataBarChart(userActivity);
+
+  return (
+    <ContainerStyles>
+      <ResponsiveContainer width={"100%"} height={"100%"}>
+        <BarChart
+          data={data}
+          barGap={8}
+          margin={{ top: 24, right: 30, bottom: 23, left: 43 }}
+        >
+          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <XAxis
+            dataKey="name"
+            tickLine={false}
+            tick={{ fontSize: 14, fontWeight: 500 }}
+            tickSize={15}
+            padding={{ left: -35, right: -35 }}
+          />
+          <YAxis
+            yAxisId="kg"
+            dataKey="kg"
+            orientation="right"
+            axisLine={false}
+            tickLine={false}
+            allowDecimals={false}
+            domain={["dataMin - 1", "dataMax + 2"]}
+            tickSize={45}
+            tick={{ fontSize: 14, fontWeight: 500 }}
+          />
+          <YAxis
+            yAxisId="cal"
+            dataKey="kCal"
+            domain={[0, "dataMax + 50"]}
+            hide={true}
+          />
+          <Tooltip
+            cursor={<CustomizedCursor />}
+            label={10}
+            contentStyle={tooltipContentStyle}
+            itemStyle={tooltipItemStyle}
+            labelStyle={tooltipLabelStyle}
+            formatter={tooltipFormatter}
+          />
+          <Legend
+            verticalAlign="top"
+            align="right"
+            height={50}
+            content={<CustomizedLegend />}
+          />
+          <Bar
+            yAxisId="kg"
+            dataKey="kg"
+            name="Poids (kg)"
+            fill="#282D30"
+            legendType="circle"
+            barSize={7}
+            radius={[3, 3, 0, 0]}
+          />
+          <Bar
+            yAxisId="cal"
+            dataKey="kCal"
+            name="Calories brûlées (kCal)"
+            fill="#E60000"
+            legendType="circle"
+            barSize={7}
+            radius={[3, 3, 0, 0]}
+          />
+        </BarChart>
+      </ResponsiveContainer>
+    </ContainerStyles>
+  );
+};
+
+export default SimpleBarChart;

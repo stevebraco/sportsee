@@ -1,3 +1,10 @@
+import {
+  USER_ACTIVITY,
+  USER_AVERAGE_SESSIONS,
+  USER_MAIN_DATA,
+  USER_PERFORMANCE,
+} from "../data";
+
 export const fetchName = ["user", "activity", "averageSessions", "performance"];
 
 export const urls = (id) => {
@@ -9,21 +16,22 @@ export const urls = (id) => {
   ];
 };
 
-export const dayWeekAverageSessions = {
-  1: "L",
-  2: "M",
-  3: "M",
-  4: "J",
-  5: "V",
-  6: "S",
-  7: "D",
-};
+export const dataLocal = (id) => {
+  const dataLocale = [
+    USER_MAIN_DATA,
+    USER_ACTIVITY,
+    USER_AVERAGE_SESSIONS,
+    USER_PERFORMANCE,
+  ];
+  let dataState = {};
 
-export const subjectNamePerformance = {
-  intensity: "Intensité",
-  speed: "Vitesse",
-  strength: "Force",
-  endurance: "Endurance",
-  energy: "Energie",
-  cardio: "Cardio",
+  const findId = dataLocale.map((data) =>
+    data.find((user) => user.id === +id || user.userId === +id)
+  );
+
+  findId.map((item, index) => {
+    return (dataState[fetchName[index]] = item);
+  });
+
+  return dataState;
 };

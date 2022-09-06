@@ -1,12 +1,13 @@
 import React from "react";
-import Layout from "./components/Layout";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
+import GlobalStyles from "./styles/GlobalStyles";
 
 function App() {
   return (
     <BrowserRouter>
+      <GlobalStyles />
       <Layout>
         <Routes>
           <Route path="/:id" element={<Home />} />
