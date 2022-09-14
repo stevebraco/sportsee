@@ -21,7 +21,7 @@ import dataTodayScore from './PieChartUtils';
 const SimplePieChart = ({ todayScore }) => {
   const data = dataTodayScore(todayScore);
 
-  const COLORS = ['#19ff00', '#E60000'];
+  const COLORS = ['#E60000', '#FBFBFB'];
 
   return (
     <PieChartStyles>
