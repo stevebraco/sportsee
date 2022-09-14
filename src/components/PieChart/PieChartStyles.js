@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PieChartStyles = styled.div`
   width: 225px;

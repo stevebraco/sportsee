@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ContainerStyles = styled.div`
   max-width: 710px;
@@ -7,10 +7,6 @@ export const ContainerStyles = styled.div`
   background: #fbfbfb;
 
   margin-bottom: 5px;
-
-  /* .recharts-surface {
-    width: 100%;
-  } */
 
   .recharts-tooltip-cursor {
     transform: translate(15px, 0px);
@@ -33,7 +29,7 @@ export const BadgeStyles = styled.span`
   margin-right: 10px;
   margin-left: 32px;
   background-color: ${(props) =>
-    props.value === "Poids (kg)" ? "#000000" : "#E60000"};
+    props.value === 'Poids (kg)' ? '#000000' : '#E60000'};
 `;
 
 export const CustomizedLegendStyles = styled.div`

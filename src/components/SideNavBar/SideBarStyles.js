@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const SideBarStyles = styled.div`
+const SideBarStyles = styled.div`
   background: #020203;
   max-width: 117px;
   min-width: 117px;
@@ -11,3 +11,5 @@ export const SideBarStyles = styled.div`
   justify-content: center;
   gap: 20px;
 `;
+
+export default SideBarStyles;

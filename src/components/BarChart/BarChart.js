@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import {
   ResponsiveContainer,
   Bar,
@@ -8,8 +10,8 @@ import {
   Tooltip,
   XAxis,
   YAxis,
-} from "recharts";
-import { ContainerStyles } from "./BarChartStyles";
+} from 'recharts';
+import { ContainerStyles } from './BarChartStyles';
 import {
   CustomizedCursor,
   CustomizedLegend,
@@ -18,20 +20,31 @@ import {
   tooltipFormatter,
   tooltipItemStyle,
   tooltipLabelStyle,
-} from "./BarChartUtils";
-
+} from './BarChartUtils';
+/**
+ * @param  {Array} {userActivity}
+ * return <SimpleBarChart userActivity={activity.sessions} />
+ */
 const SimpleBarChart = ({ userActivity }) => {
   const data = dataBarChart(userActivity);
 
   return (
     <ContainerStyles>
-      <ResponsiveContainer width={"100%"} height={"100%"}>
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
           barGap={8}
-          margin={{ top: 24, right: 30, bottom: 23, left: 43 }}
+          margin={{
+            top: 24,
+            right: 30,
+            bottom: 23,
+            left: 43,
+          }}
         >
-          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <CartesianGrid
+            vertical={false}
+            strokeDasharray="3 3"
+          />
           <XAxis
             dataKey="name"
             tickLine={false}
@@ -46,15 +59,15 @@ const SimpleBarChart = ({ userActivity }) => {
             axisLine={false}
             tickLine={false}
             allowDecimals={false}
-            domain={["dataMin - 1", "dataMax + 2"]}
+            domain={['dataMin - 1', 'dataMax + 2']}
             tickSize={45}
             tick={{ fontSize: 14, fontWeight: 500 }}
           />
           <YAxis
             yAxisId="cal"
             dataKey="kCal"
-            domain={[0, "dataMax + 50"]}
-            hide={true}
+            domain={[0, 'dataMax + 50']}
+            hide
           />
           <Tooltip
             cursor={<CustomizedCursor />}
@@ -95,3 +108,13 @@ const SimpleBarChart = ({ userActivity }) => {
 };
 
 export default SimpleBarChart;
+
+SimpleBarChart.propTypes = {
+  userActivity: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.string.isRequired,
+      kilogram: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

@@ -1,32 +1,27 @@
-import React from "react";
-import { Cell, Label, Pie, PieChart, ResponsiveContainer } from "recharts";
-import { PieChartStyles, TextObjective, TextValue } from "./PieChartStyles";
-import { dataTodayScore } from "./PieChartUtils";
+import React from 'react';
+import PropTypes from 'prop-types';
+import {
+  Cell,
+  Label,
+  Pie,
+  PieChart,
+  ResponsiveContainer,
+} from 'recharts';
+import {
+  PieChartStyles,
+  TextObjective,
+  TextValue,
+} from './PieChartStyles';
+import dataTodayScore from './PieChartUtils';
+/**
+ * @param  {} {todayScore}
+ *  * return a number
 
+ */
 const SimplePieChart = ({ todayScore }) => {
   const data = dataTodayScore(todayScore);
 
-  const COLORS = ["#19ff00", "#E60000"];
-
-  const CustomLabel = ({ viewBox, labelText, value }) => {
-    const { cx, cy } = viewBox;
-    return (
-      <>
-        <circle cx={cx} cy={cy} r="71" strokeWidth="3" fill="#ffffff" />
-        <g>
-          <TextValue x={cx} y={cy}>
-            {value}%
-          </TextValue>
-          <TextObjective x={cx} y={cy + 25}>
-            de votre
-          </TextObjective>
-          <TextObjective x={cx} y={cy + 47}>
-            objectif
-          </TextObjective>
-        </g>
-      </>
-    );
-  };
+  const COLORS = ['#19ff00', '#E60000'];
 
   return (
     <PieChartStyles>
@@ -43,7 +38,7 @@ const SimplePieChart = ({ todayScore }) => {
           >
             {data.map((entry, index) => (
               <Cell
-                key={`cell-${index}`}
+                key={`cell-${entry.toString()}`}
                 fill={COLORS[index]}
                 cornerRadius="50%"
               />
@@ -51,7 +46,10 @@ const SimplePieChart = ({ todayScore }) => {
 
             <Label
               content={
-                <CustomLabel labelText="ICPs" value={todayScore * 100} />
+                <CustomLabel
+                  labelText="ICPs"
+                  value={todayScore * 100}
+                />
               }
             />
           </Pie>
@@ -61,4 +59,42 @@ const SimplePieChart = ({ todayScore }) => {
   );
 };
 
+const CustomLabel = ({ viewBox, value }) => {
+  const { cx, cy } = viewBox;
+  return (
+    <>
+      <circle
+        cx={cx}
+        cy={cy}
+        r="71"
+        strokeWidth="3"
+        fill="#ffffff"
+      />
+      <g>
+        <TextValue x={cx} y={cy}>
+          {`${value}%`}
+        </TextValue>
+        <TextObjective x={cx} y={cy + 25}>
+          de votre
+        </TextObjective>
+        <TextObjective x={cx} y={cy + 47}>
+          objectif
+        </TextObjective>
+      </g>
+    </>
+  );
+};
+
 export default SimplePieChart;
+
+SimplePieChart.propTypes = {
+  todayScore: PropTypes.number.isRequired,
+};
+CustomLabel.propTypes = {
+  // eslint-disable-next-line react/require-default-props
+  viewBox: PropTypes.shape({
+    cx: PropTypes.number,
+    cy: PropTypes.number,
+  }),
+  value: PropTypes.number.isRequired,
+};

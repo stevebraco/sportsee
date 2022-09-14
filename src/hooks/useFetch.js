@@ -1,13 +1,15 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import {
-  USER_ACTIVITY,
-  USER_AVERAGE_SESSIONS,
-  USER_MAIN_DATA,
-  USER_PERFORMANCE,
-} from "../data";
-import { dataLocal, fetchName, findId, urls } from "../utils/dataUtils";
+  dataLocal,
+  fetchName,
+  urls,
+} from '../utils/dataUtils';
 
+/**
+ * @param  {string} urlId
+ * fetch the data
+ */
 const useFetch = (urlId) => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
@@ -15,24 +17,24 @@ const useFetch = (urlId) => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      if (process.env.REACT_APP_USE_MOCK_VALUE === "true") {
+      if (process.env.REACT_APP_USE_MOCK_VALUE === 'true') {
         const data = dataLocal(urlId);
         setUserData(data);
         setLoading(false);
       } else {
         Promise.all(
           urls(urlId).map(async (url) => {
-            return await axios(url);
+            await axios(url);
           })
         )
           .then((data) => {
-            let dataState = {};
+            const dataState = {};
             data.map((item, index) => {
-              return (dataState[fetchName[index]] = item.data.data);
+              dataState[fetchName[index]] = item.data.data;
+              return dataState;
             });
             setUserData(dataState);
             setLoading(false);
-            return;
           })
           .catch((err) => console.log(err));
       }

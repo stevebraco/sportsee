@@ -1,15 +1,17 @@
-import React from "react";
-import { useParams } from "react-router";
-import Welcome from "../components/Welcome/Welcome";
-import useFetch from "../hooks/useFetch";
-import Charts from "../components/Charts/Charts";
-
+import React from 'react';
+import { useParams } from 'react-router';
+import Welcome from '../components/Welcome/Welcome';
+import useFetch from '../hooks/useFetch';
+import Charts from '../components/Charts/Charts';
+/**
+ * return <Home />
+ */
 const Home = () => {
   const { id } = useParams();
 
   const { userData, loading } = useFetch(id);
 
-  if (loading) return "loading...";
+  if (loading) return 'loading...';
 
   return (
     <>

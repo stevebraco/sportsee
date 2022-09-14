@@ -3,19 +3,30 @@ import {
   USER_AVERAGE_SESSIONS,
   USER_MAIN_DATA,
   USER_PERFORMANCE,
-} from "../data";
+} from '../data';
 
-export const fetchName = ["user", "activity", "averageSessions", "performance"];
+export const fetchName = [
+  'user',
+  'activity',
+  'averageSessions',
+  'performance',
+];
 
-export const urls = (id) => {
-  return [
-    `http://localhost:3000/user/${id}`,
-    `http://localhost:3000/user/${id}/activity`,
-    `http://localhost:3000/user/${id}/average-sessions`,
-    `http://localhost:3000/user/${id}/performance`,
-  ];
-};
+/**
+ * Return user's URL
+ * @param  {string} id
+ */
+export const urls = (id) => [
+  `http://localhost:3000/user/${id}`,
+  `http://localhost:3000/user/${id}/activity`,
+  `http://localhost:3000/user/${id}/average-sessions`,
+  `http://localhost:3000/user/${id}/performance`,
+];
 
+/**
+ * Return the local data as an object
+ * @param  {string} id
+ */
 export const dataLocal = (id) => {
   const dataLocale = [
     USER_MAIN_DATA,
@@ -23,14 +34,17 @@ export const dataLocal = (id) => {
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE,
   ];
-  let dataState = {};
+  const dataState = {};
 
   const findId = dataLocale.map((data) =>
-    data.find((user) => user.id === +id || user.userId === +id)
+    data.find(
+      (user) => user.id === +id || user.userId === +id
+    )
   );
 
   findId.map((item, index) => {
-    return (dataState[fetchName[index]] = item);
+    dataState[fetchName[index]] = item;
+    return dataState;
   });
 
   return dataState;
