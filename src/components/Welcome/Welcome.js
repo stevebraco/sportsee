@@ -14,7 +14,7 @@ const Welcome = ({ name }) => {
   return (
     <WelcomeContainer>
       <WelcomeTitle>
-        Bonjour
+        Bonjour&nbsp;
         <span className="welcome__name">{name}</span>
       </WelcomeTitle>
       <WelcomePara>
