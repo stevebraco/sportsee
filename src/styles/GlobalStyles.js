@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -74,6 +74,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 780px;
 }
 
 .recharts-cartesian-axis-line {
