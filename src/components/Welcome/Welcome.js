@@ -5,6 +5,7 @@ import {
   WelcomePara,
   WelcomeTitle,
 } from './WelcomeStyles';
+
 /**
  * @param  {string} {name}
  * return  <Welcome name={data} />
