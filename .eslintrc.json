@@ -32,9 +32,6 @@
           "object-curly-newline": "off",
           "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}],
           "comma-dangle": "off",
-          "function-paren-newline": "off",
-          "react/prop-types": "off"
-
-          
+          "function-paren-newline": "off"
     }
 }
