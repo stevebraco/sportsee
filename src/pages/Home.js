@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import Welcome from '../components/Welcome/Welcome';
 import useFetch from '../hooks/useFetch';
 import Charts from '../components/Charts/Charts';
+import ErrorPage from './ErrorPage';
 /**
  * return <Home />
  */
@@ -12,6 +13,9 @@ const Home = () => {
   const { userData, loading } = useFetch(id);
 
   if (loading) return 'loading...';
+  if (userData.user === undefined) {
+    return <ErrorPage />;
+  }
 
   return (
     <>
