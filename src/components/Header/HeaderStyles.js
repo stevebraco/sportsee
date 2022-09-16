@@ -7,6 +7,7 @@ export const HeaderStyles = styled.header`
   justify-content: space-between;
   background: #020203;
   height: 91px;
+  box-shadow: 0px 3px 13px 0px rgba(0, 0, 0, 0.41);
 
   img {
     width: 178px;
