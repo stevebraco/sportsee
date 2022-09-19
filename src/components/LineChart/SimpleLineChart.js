@@ -22,7 +22,7 @@ import {
   tooltiplabelStyle,
 } from './LineChartUtils';
 /**
- * @param  {Array} {userAverageSessions} - user's data
+ * @param  {Array} {userAverageSessions} - information on the average duration of sessions.
  * return  <SimpleLineChart userAverageSessions={averageSessions.sessions} />
  */
 const SimpleLineChart = ({ userAverageSessions }) => {

@@ -14,7 +14,7 @@ import {
 } from './PieChartStyles';
 import dataTodayScore from './PieChartUtils';
 /**
- * @param  {} {todayScore}
+ * @param  {} {todayScore} general user information.
  *  * return a number
 
  */

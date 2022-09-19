@@ -9,7 +9,7 @@ import {
 import RadarChartStyles from './RadarChartStyles';
 import { dataPerformance } from './RadarChartUtils';
 /**
- * @param  {Array} {performance}
+ * @param  {Array} {performance} information about calories
  * @param  {Object} {kind}
  * return <SimpleRadarChart performance={performance.data} kind={performance.kind} />
  */

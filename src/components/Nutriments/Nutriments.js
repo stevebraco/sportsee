@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Nutriment from '../Nutriment/Nutriment';
 import ContainerNutriments from './NutrimentsStyles';
 /**
- * @param  {Object} {userData} user's data
+ * @param  {Object} {userData} information about calories, proteins, carbohydrates and fats
  * return <Nutriments userData={user.keyData} />
 
  */

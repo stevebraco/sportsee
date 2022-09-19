@@ -13,7 +13,7 @@ export const fetchName = [
 ];
 
 /**
- * Return user's URL
+ * Return a array user's URL
  * @param  {string} id
  */
 export const urls = (id) => [

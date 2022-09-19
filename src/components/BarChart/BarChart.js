@@ -22,7 +22,7 @@ import {
   tooltipLabelStyle,
 } from './BarChartUtils';
 /**
- * @param  {Array} {userActivity}
+ * @param  {Array} {userActivity} information about weight and calories burned
  * return <SimpleBarChart userActivity={activity.sessions} />
  */
 const SimpleBarChart = ({ userActivity }) => {
