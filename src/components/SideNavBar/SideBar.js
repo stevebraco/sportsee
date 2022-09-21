@@ -1,6 +1,10 @@
 import React from 'react';
 import SideBarStyles from './SideBarStyles';
 
+/**
+ * Component that represents side of the page
+ * return <SideBar />
+ */
 const SideBar = () => (
   <SideBarStyles>
     <img src="./images/yoga.png" alt="yoga" />

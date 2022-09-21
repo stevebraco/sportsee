@@ -14,6 +14,7 @@ import {
 } from './PieChartStyles';
 import dataTodayScore from './PieChartUtils';
 /**
+ * Component for showing average score as a pie chart
  * @param  {} {todayScore} general user information.
  *  * return a number
 

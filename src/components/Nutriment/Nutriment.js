@@ -8,6 +8,7 @@ import {
 } from './NutrimentStyles';
 
 /**
+ *  * Component for showing key info of the user
  * @param  {number} {number}
  * @param  {string} {unity}
  * @param  {string} {img}

@@ -9,6 +9,7 @@ import {
 import RadarChartStyles from './RadarChartStyles';
 import { dataPerformance } from './RadarChartUtils';
 /**
+ * Component for showing type of activity as a radarchart
  * @param  {Array} {performance} information about calories
  * @param  {Object} {kind}
  * return <SimpleRadarChart performance={performance.data} kind={performance.kind} />

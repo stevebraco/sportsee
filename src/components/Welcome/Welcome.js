@@ -7,7 +7,8 @@ import {
 } from './WelcomeStyles';
 
 /**
- * @param  {string} {name}
+ * Component for showing the user's name
+ * @param  {string} {name} First Name of the user
  * return  <Welcome name={data} />
  */
 const Welcome = ({ name }) => {

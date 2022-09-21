@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { HeaderStyles, Navigation } from './HeaderStyles';
+
 /**
+ * Component that represents at the top of the page
  * return <Header />
  */
 export default function Header() {

@@ -21,7 +21,9 @@ import {
   tooltipItemStyle,
   tooltipLabelStyle,
 } from './BarChartUtils';
+
 /**
+ * Component for showing daily activity as a barchart
  * @param  {Array} {userActivity} information about weight and calories burned
  * return <SimpleBarChart userActivity={activity.sessions} />
  */

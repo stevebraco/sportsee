@@ -11,6 +11,7 @@ import {
 } from './ChartsStyles';
 
 /**
+ * Component for showing the perfomce of the user with recharts
  * @param  {} {user} general user information.
  * @param  {} {activity} information about weight and calories burned.
  * @param  {} {averageSessions} information on the average duration of sessions.
