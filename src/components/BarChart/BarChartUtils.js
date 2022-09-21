@@ -84,3 +84,13 @@ CustomizedLegend.propTypes = {
     })
   ),
 };
+
+CustomizedCursor.defaultProps = {
+  brushBottom: undefined,
+  payloadIndex: undefined,
+};
+
+CustomizedCursor.propTypes = {
+  brushBottom: PropTypes.number,
+  payloadIndex: PropTypes.number,
+};

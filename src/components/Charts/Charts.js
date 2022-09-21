@@ -9,6 +9,7 @@ import {
   ContainerChart,
   WrapperChart,
 } from './ChartsStyles';
+
 /**
  * @param  {} {user} general user information.
  * @param  {} {activity} information about weight and calories burned.
@@ -16,7 +17,6 @@ import {
  * @param  {} {performance} information about calories
  * return a component <Charts {...userData} />
  */
-
 const Charts = ({
   user,
   activity,

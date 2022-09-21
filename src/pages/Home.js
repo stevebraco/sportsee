@@ -5,7 +5,8 @@ import useFetch from '../hooks/useFetch';
 import Charts from '../components/Charts/Charts';
 import ErrorPage from './ErrorPage';
 /**
- * return a component <Home />
+ * Component for showing details of the user
+ * return (<Home />)
  */
 const Home = () => {
   const { id } = useParams();

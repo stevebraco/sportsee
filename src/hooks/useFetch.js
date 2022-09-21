@@ -7,8 +7,8 @@ import {
 } from '../utils/dataUtils';
 
 /**
- * @param  {string} urlId
- * fetch the data
+ * @param  {string} urlId user's url
+ * fetch the user's data
  * return a object
  */
 const useFetch = (urlId) => {
@@ -25,7 +25,8 @@ const useFetch = (urlId) => {
       } else {
         Promise.all(
           urls(urlId).map(async (url) => {
-            await axios(url);
+            const res = await axios(url);
+            return res;
           })
         )
           .then((data) => {
