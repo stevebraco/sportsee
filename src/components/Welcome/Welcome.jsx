@@ -11,21 +11,18 @@ import {
  * @param  {string} {name} First Name of the user
  * return  <Welcome name={data} />
  */
-const Welcome = ({ name }) => {
-  if (name === undefined) return '...loading';
-  return (
-    <WelcomeContainer>
-      <WelcomeTitle>
-        Bonjour&nbsp;
-        <span className="welcome__name">{name}</span>
-      </WelcomeTitle>
-      <WelcomePara>
-        Félicitation ! Vous avez explosé vos objectifs hier
-        👏
-      </WelcomePara>
-    </WelcomeContainer>
-  );
-};
+const Welcome = ({ name }) => (
+  <WelcomeContainer>
+    <WelcomeTitle>
+      Bonjour&nbsp;
+      <span className="welcome__name">{name}</span>
+    </WelcomeTitle>
+    <WelcomePara>
+      Félicitation ! Vous avez explosé vos objectifs hier
+      👏
+    </WelcomePara>
+  </WelcomeContainer>
+);
 
 export default Welcome;
 

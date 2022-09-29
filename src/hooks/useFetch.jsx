@@ -1,10 +1,11 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect, useState } from 'react';
 import {
   dataLocal,
-  fetchName,
+  dataStateObject,
   urls,
 } from '../utils/dataUtils';
+import getDataUser from '../utils/getDataUser';
 
 /**
  * @param  {string} urlId user's url
@@ -14,37 +15,33 @@ import {
 const useFetch = (urlId) => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true);
       if (process.env.REACT_APP_USE_MOCK_VALUE === 'true') {
         const data = dataLocal(urlId);
         setUserData(data);
-        setLoading(false);
       } else {
         Promise.all(
           urls(urlId).map(async (url) => {
-            const res = await axios(url);
+            const res = await getDataUser(url);
             return res;
           })
         )
-          .then((data) => {
-            const dataState = {};
-            data.map((item, index) => {
-              dataState[fetchName[index]] = item.data.data;
-              return dataState;
-            });
-            setUserData(dataState);
-            setLoading(false);
+          .then((returnedDataUser) => {
+            const dataInObject = dataStateObject(returnedDataUser);
+            setUserData(dataInObject);
           })
-          .catch((err) => console.log(err));
+          .catch((err) => {
+            setError(err.response.status);
+          }).finally(() => setLoading(false));
       }
     };
     fetchData();
   }, [urlId]);
 
-  return { userData, loading };
+  return { userData, loading, error };
 };
 
 export default useFetch;

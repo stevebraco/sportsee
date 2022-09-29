@@ -4,6 +4,8 @@ import Welcome from '../components/Welcome/Welcome';
 import useFetch from '../hooks/useFetch';
 import Charts from '../components/Charts/Charts';
 import ErrorPage from './ErrorPage';
+import Loading from '../components/Loading/Loading';
+
 /**
  * Component for showing details of the user
  * return (<Home />)
@@ -11,10 +13,10 @@ import ErrorPage from './ErrorPage';
 const Home = () => {
   const { id } = useParams();
 
-  const { userData, loading } = useFetch(id);
+  const { userData, loading, error } = useFetch(id);
 
-  if (loading) return 'loading...';
-  if (userData.user === undefined) return <ErrorPage />;
+  if (loading) return <Loading />;
+  if (error) return <ErrorPage />;
 
   return (
     <>

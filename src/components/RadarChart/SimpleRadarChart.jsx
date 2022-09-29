@@ -8,10 +8,11 @@ import {
 } from 'recharts';
 import RadarChartStyles from './RadarChartStyles';
 import { dataPerformance } from './RadarChartUtils';
+
 /**
  * Component for showing type of activity as a radarchart
  * @param  {Array} {performance} information about calories
- * @param  {Object} {kind}
+ * @param  {Object} {kind} information about type of effort
  * return <SimpleRadarChart performance={performance.data} kind={performance.kind} />
  */
 const SimpleRadarChart = ({ performance, kind }) => {
@@ -20,10 +21,10 @@ const SimpleRadarChart = ({ performance, kind }) => {
   return (
     <RadarChartStyles>
       <RadarChart
+        data={data}
         outerRadius={80}
         width={225}
         height={263}
-        data={data}
       >
         <PolarGrid radialLines={false} />
         <PolarAngleAxis

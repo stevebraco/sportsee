@@ -64,7 +64,6 @@ const SimpleLineChart = ({ userAverageSessions }) => {
             hide
           />
           <Tooltip
-            label={10}
             contentStyle={tooltipContentStyle}
             itemStyle={tooltipitemStyle}
             labelStyle={tooltiplabelStyle}
