@@ -10,7 +10,7 @@ import getDataUser from '../utils/getDataUser';
 /**
  * @param  {string} urlId user's url
  * fetch the user's data
- * return a object
+ * @return a object
  */
 const useFetch = (urlId) => {
   const [userData, setUserData] = useState({});

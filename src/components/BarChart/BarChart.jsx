@@ -25,7 +25,7 @@ import {
 /**
  * Component for showing daily activity as a barchart
  * @param  {Array} {userActivity} information about weight and calories burned
- * return <SimpleBarChart userActivity={activity.sessions} />
+ * @return <SimpleBarChart userActivity={activity.sessions} />
  */
 const SimpleBarChart = ({ userActivity }) => {
   const data = dataBarChart(userActivity);

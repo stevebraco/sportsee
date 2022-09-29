@@ -24,7 +24,7 @@ import {
 /**
  * Component for showing average duration as a linechart
  * @param  {Array} {userAverageSessions} - information on the average duration of sessions.
- * return  <SimpleLineChart userAverageSessions={averageSessions.sessions} />
+ * @return  <SimpleLineChart userAverageSessions={averageSessions.sessions} />
  */
 const SimpleLineChart = ({ userAverageSessions }) => {
   const data = dataLineChart(userAverageSessions);
@@ -37,9 +37,11 @@ const SimpleLineChart = ({ userAverageSessions }) => {
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
+          width={220}
+          height={263}
           margin={{
             top: 0,
-            right: 0,
+            right: 8,
             left: 5,
             bottom: -40,
           }}

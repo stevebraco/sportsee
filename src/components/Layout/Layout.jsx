@@ -8,7 +8,7 @@ import GlobalStyles from '../../styles/GlobalStyles';
 /**
  * Component showing the page
  * @param  {} {children}
- * return <Layout></Layout>
+ * @return <Layout></Layout>
  */
 const Layout = ({ children }) => (
   <>

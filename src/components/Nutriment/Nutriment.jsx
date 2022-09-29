@@ -13,7 +13,7 @@ import {
  * @param  {string} {unity}
  * @param  {string} {img}
  * @param  {string} {name}
- * return  <Nutriment img="data" number={data} unity="data" name="data"/>
+ * @return  <Nutriment img="data" number={data} unity="data" name="data"/>
  */
 const Nutriment = ({ number, unity, img, name }) => (
   <ContainerNutriment>

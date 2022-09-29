@@ -16,7 +16,7 @@ import {
  * @param  {} {activity} information about weight and calories burned.
  * @param  {} {averageSessions} information on the average duration of sessions.
  * @param  {} {performance} information about calories
- * return a component <Charts {...userData} />
+ * @return a component <Charts {...userData} />
  */
 const Charts = ({
   user,

@@ -7,6 +7,7 @@ export const ContainerChart = styled.div`
 `;
 
 export const WrapperChart = styled.div`
-  display: flex;
-  gap: 3%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1%;
 `;

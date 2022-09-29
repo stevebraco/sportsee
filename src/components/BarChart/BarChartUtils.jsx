@@ -7,7 +7,7 @@ import {
 } from './BarChartStyles';
 /**
  * @param  {Array} userActivity
- * return a array of the name, Kcal, kg
+ * @return a array of the name, Kcal, kg
  */
 export const dataBarChart = (userActivity) =>
   userActivity?.map((data) => ({
@@ -41,7 +41,7 @@ export const tooltipLabelStyle = { display: 'none' };
  * The formatter function of value in tooltip
  * @param  {string} value
  * @param  {string} entry
- * return an array
+ * @return an array
  */
 export const tooltipFormatter = (value, entry) => [
   `${value} ${entry.includes('kg') ? 'kg' : 'kCal'}`,
@@ -70,7 +70,7 @@ export const CustomizedLegend = ({ payload }) => (
  * @param  {Number} {brushBottom}
  * @param  {Number} payloadIndex}
  * @param  {any} {...rest}
- * return a object
+ * @return a object
  */
 export const CustomizedCursor = ({
   brushBottom,

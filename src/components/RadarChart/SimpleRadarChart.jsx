@@ -13,7 +13,7 @@ import { dataPerformance } from './RadarChartUtils';
  * Component for showing type of activity as a radarchart
  * @param  {Array} {performance} information about calories
  * @param  {Object} {kind} information about type of effort
- * return <SimpleRadarChart performance={performance.data} kind={performance.kind} />
+ * @return <SimpleRadarChart performance={performance.data} kind={performance.kind} />
  */
 const SimpleRadarChart = ({ performance, kind }) => {
   const data = dataPerformance(performance, kind);
@@ -23,7 +23,7 @@ const SimpleRadarChart = ({ performance, kind }) => {
       <RadarChart
         data={data}
         outerRadius={80}
-        width={225}
+        width={220}
         height={263}
       >
         <PolarGrid radialLines={false} />
@@ -31,8 +31,8 @@ const SimpleRadarChart = ({ performance, kind }) => {
           dataKey="subject"
           stroke="white"
           tickLine={false}
-          dy={4}
-          style={{ fontSize: '10px' }}
+          dy={3}
+          style={{ fontSize: '9px' }}
         />
         <Radar
           dataKey="value"

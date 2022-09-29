@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const PieChartStyles = styled.div`
-  width: 225px;
+  width: 220px;
   height: 263px;
   background: #fbfbfb;
   border-radius: 5px;

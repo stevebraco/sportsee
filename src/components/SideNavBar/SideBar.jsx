@@ -3,7 +3,7 @@ import SideBarStyles from './SideBarStyles';
 
 /**
  * Component that represents side of the page
- * return <SideBar />
+ * @return <SideBar />
  */
 const SideBar = () => (
   <SideBarStyles>

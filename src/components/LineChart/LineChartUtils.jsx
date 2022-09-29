@@ -9,7 +9,7 @@ const dayWeekAverageSessions = {
 };
 /**
  * @param  {Array} userAverageSessions
- * return user's averageSessions data
+ * @return user's averageSessions data
  */
 export const dataLineChart = (userAverageSessions) =>
   userAverageSessions?.map((data) => ({
@@ -28,7 +28,7 @@ export const tooltipitemStyle = { color: '#000000' };
 
 /**
  * @param  {string} value
- * return a array
+ * @return a array
  */
 export const tooltipFormatter = (value) => [`${value} min`];
 

@@ -8,7 +8,7 @@ import Loading from '../components/Loading/Loading';
 
 /**
  * Component for showing details of the user
- * return (<Home />)
+ * @return (<Home />)
  */
 const Home = () => {
   const { id } = useParams();

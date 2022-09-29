@@ -6,7 +6,7 @@ import ContainerNutriments from './NutrimentsStyles';
 /**
  * Component for showing key info of the user
  * @param  {Object} {userData} information about calories, proteins, carbohydrates and fats
- * return <Nutriments userData={user.keyData} />
+ * @return <Nutriments userData={user.keyData} />
  */
 const Nutriments = ({ userData }) => (
   <ContainerNutriments>

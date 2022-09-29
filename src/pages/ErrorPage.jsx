@@ -3,7 +3,7 @@ import Error from '../components/Error/Error';
 
 /**
  * Component for showing Error page
- * return  <Error />
+ * @return  <Error />
  */
 const ErrorPage = () => <Error />;
 export default ErrorPage;

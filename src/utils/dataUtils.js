@@ -13,7 +13,7 @@ export const fetchName = [
 ];
 
 /**
- * Return a array user's URL
+ * @return a array user's URL
  * @param  {string} id
  */
 export const urls = (id) => [
@@ -24,7 +24,7 @@ export const urls = (id) => [
 ];
 
 /**
- * Return the local data as an object
+ * @return the local data as an object
  * @param  {string} id
  */
 export const dataLocal = (id) => {
@@ -53,7 +53,7 @@ export const dataLocal = (id) => {
 /**
  * array data convert in object
  * @param  {array} returnedDataUser
- * return a object
+ * @return a object
  */
 export const dataStateObject = (returnedDataUser) => {
   const dataState = {};

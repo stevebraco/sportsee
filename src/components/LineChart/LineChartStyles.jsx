@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const LineChartStyles = styled.div`
   position: relative;
-  width: 225px;
-  height: 263;
+  width: 220px;
+  height: 263px;
   background: #ff0000;
   border-radius: 5px;
   overflow: hidden;

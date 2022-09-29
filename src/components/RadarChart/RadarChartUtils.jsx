@@ -9,7 +9,7 @@ export const subjectNamePerformance = {
 /**
  * @param  {array} performance
  * @param  {object} kind
- * return a array of user's performance
+ * @return a array of user's performance
  */
 export const dataPerformance = (performance, kind) =>
   performance

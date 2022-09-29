@@ -4,7 +4,7 @@ import { HeaderStyles, Navigation } from './HeaderStyles';
 
 /**
  * Component that represents at the top of the page
- * return <Header />
+ * @return <Header />
  */
 export default function Header() {
   return (
