@@ -73,7 +73,6 @@ const SimpleBarChart = ({ userActivity }) => {
           />
           <Tooltip
             cursor={<CustomizedCursor />}
-            label={10}
             contentStyle={tooltipContentStyle}
             itemStyle={tooltipItemStyle}
             labelStyle={tooltipLabelStyle}
