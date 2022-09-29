@@ -49,3 +49,17 @@ export const dataLocal = (id) => {
 
   return dataState;
 };
+
+/**
+ * array data convert in object
+ * @param  {array} returnedDataUser
+ * return a object
+ */
+export const dataStateObject = (returnedDataUser) => {
+  const dataState = {};
+  returnedDataUser.map(
+    (item, index) =>
+      (dataState[fetchName[index]] = item.data.data)
+  );
+  return dataState;
+};
