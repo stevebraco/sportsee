@@ -7,7 +7,7 @@ import {
 } from './BarChartStyles';
 /**
  * @param  {Array} userActivity
- * return a object of the name, Kcal, kg
+ * return a array of the name, Kcal, kg
  */
 export const dataBarChart = (userActivity) =>
   userActivity?.map((data) => ({
@@ -16,6 +16,9 @@ export const dataBarChart = (userActivity) =>
     kg: data.kilogram,
   }));
 
+/**
+ * the option is the custom react element of rendering tooltip
+ */
 export const tooltipContentStyle = {
   background: 'red',
   width: '60px',
@@ -28,10 +31,14 @@ export const tooltipContentStyle = {
   border: 'none',
 };
 
-export const tooltipItemStyle = { color: 'white' };
+/**
+ * tooltip content item
+ */export const tooltipItemStyle = { color: 'white' };
 
 export const tooltipLabelStyle = { display: 'none' };
+
 /**
+ * The formatter function of value in tooltip
  * @param  {string} value
  * @param  {string} entry
  * return an array
@@ -39,9 +46,10 @@ export const tooltipLabelStyle = { display: 'none' };
 export const tooltipFormatter = (value, entry) => [
   `${value} ${entry.includes('kg') ? 'kg' : 'kCal'}`,
 ];
+
 /**
  * @param  {Array} {payload}
- * render the legend
+ * render the legend's content
  */
 export const CustomizedLegend = ({ payload }) => (
   <CustomizedLegendStyles>
@@ -56,7 +64,9 @@ export const CustomizedLegend = ({ payload }) => (
     </div>
   </CustomizedLegendStyles>
 );
+
 /**
+ * The configuration of cursor
  * @param  {Number} {brushBottom}
  * @param  {Number} payloadIndex}
  * @param  {any} {...rest}
@@ -68,7 +78,7 @@ export const CustomizedCursor = ({
   ...rest
 }) => {
   rest.fill = '#C4C4C480';
-  rest.width = 80;
+  rest.width = 55;
   return <rect {...rest} />;
 };
 
