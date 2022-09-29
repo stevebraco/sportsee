@@ -7,7 +7,7 @@ export const ContainerNutriment = styled.div`
   justify-content: center;
   background-color: #fbfbfb;
   border-radius: 5px;
-  max-width: 220px;
+  max-width: 215px;
   width: 100%;
   height: 124px;
   padding: 0 35px 0 35px;

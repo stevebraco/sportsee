@@ -37,11 +37,11 @@ const SimpleLineChart = ({ userAverageSessions }) => {
       <ResponsiveContainer width="100%" height="100%">
         <LineChart
           data={data}
-          width={220}
+          width={215}
           height={263}
           margin={{
             top: 0,
-            right: 8,
+            right: 0,
             left: 5,
             bottom: -40,
           }}

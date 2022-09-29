@@ -23,7 +23,7 @@ const SimpleRadarChart = ({ performance, kind }) => {
       <RadarChart
         data={data}
         outerRadius={80}
-        width={220}
+        width={215}
         height={263}
       >
         <PolarGrid radialLines={false} />
@@ -32,7 +32,7 @@ const SimpleRadarChart = ({ performance, kind }) => {
           stroke="white"
           tickLine={false}
           dy={3}
-          style={{ fontSize: '9px' }}
+          style={{ fontSize: '8px' }}
         />
         <Radar
           dataKey="value"

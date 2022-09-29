@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LineChartStyles = styled.div`
   position: relative;
-  width: 220px;
+  width: 215px;
   height: 263px;
   background: #ff0000;
   border-radius: 5px;
