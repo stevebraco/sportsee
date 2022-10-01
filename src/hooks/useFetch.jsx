@@ -22,6 +22,7 @@ const useFetch = (urlId) => {
       if (process.env.REACT_APP_USE_MOCK_VALUE === 'true') {
         const data = dataLocal(urlId);
         setUserData(data);
+        setLoading(false);
       } else {
         Promise.all(
           urls(urlId).map(async (url) => {
