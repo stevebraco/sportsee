@@ -6,8 +6,9 @@ import {
   CustomizedLegendStyles,
 } from './BarChartStyles';
 /**
+ * The source data, in which each element is an object.
  * @param  {Array} userActivity
- * @return a array of the name, Kcal, kg
+ * @return a object of the name, Kcal, kg
  */
 export const dataBarChart = (userActivity) =>
   userActivity?.map((data) => ({
@@ -83,7 +84,6 @@ export const CustomizedCursor = ({
 };
 
 CustomizedLegend.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   payload: PropTypes.arrayOf(
     PropTypes.shape({
       inactive: PropTypes.bool,

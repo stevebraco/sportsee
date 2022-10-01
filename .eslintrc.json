@@ -33,6 +33,7 @@
           "react/jsx-wrap-multilines": ["error", {"declaration": false, "assignment": false}],
           "comma-dangle": "off",
           "function-paren-newline": "off",
-          "no-return-assign":"off"
+          "no-return-assign":"off",
+          "react/require-default-props": "off"
     }
 }

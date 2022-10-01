@@ -18,7 +18,7 @@ const useFetch = (urlId) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       if (process.env.REACT_APP_USE_MOCK_VALUE === 'true') {
         const data = dataLocal(urlId);
         setUserData(data);
@@ -39,7 +39,7 @@ const useFetch = (urlId) => {
       }
     };
     fetchData();
-  }, [urlId]);
+  }, []);
 
   return { userData, loading, error };
 };

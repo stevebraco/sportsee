@@ -1,6 +1,6 @@
 /**
  * @param  {number} todayScore
- * @return a array
+ * return a array
  */
 const dataTodayScore = (todayScore) => [
   { value: todayScore },

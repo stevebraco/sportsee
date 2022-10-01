@@ -13,10 +13,11 @@ import {
   TextValue,
 } from './PieChartStyles';
 import dataTodayScore from './PieChartUtils';
+
 /**
  * Component for showing average score as a pie chart
- * @param  {} {todayScore} general user information.
- *  * @return a number
+ * @param {todayScore} general user information.
+ * @return a number
 
  */
 const SimplePieChart = ({ todayScore }) => {
@@ -48,7 +49,6 @@ const SimplePieChart = ({ todayScore }) => {
             <Label
               content={
                 <CustomLabel
-                  labelText="ICPs"
                   value={todayScore * 100}
                 />
               }
@@ -92,7 +92,6 @@ SimplePieChart.propTypes = {
   todayScore: PropTypes.number.isRequired,
 };
 CustomLabel.propTypes = {
-  // eslint-disable-next-line react/require-default-props
   viewBox: PropTypes.shape({
     cx: PropTypes.number,
     cy: PropTypes.number,

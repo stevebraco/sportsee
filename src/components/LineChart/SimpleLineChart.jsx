@@ -21,6 +21,7 @@ import {
   tooltipitemStyle,
   tooltiplabelStyle,
 } from './LineChartUtils';
+
 /**
  * Component for showing average duration as a linechart
  * @param  {Array} {userAverageSessions} - information on the average duration of sessions.

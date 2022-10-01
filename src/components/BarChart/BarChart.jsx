@@ -58,10 +58,10 @@ const SimpleBarChart = ({ userActivity }) => {
             yAxisId="kg"
             dataKey="kg"
             orientation="right"
+            domain={['dataMin - 1', 'dataMax + 2']}
             axisLine={false}
             tickLine={false}
             allowDecimals={false}
-            domain={['dataMin - 1', 'dataMax + 2']}
             tickSize={45}
             tick={{ fontSize: 14, fontWeight: 500 }}
           />

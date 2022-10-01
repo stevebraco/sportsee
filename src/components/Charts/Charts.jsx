@@ -12,10 +12,10 @@ import {
 
 /**
  * Component for showing the perfomce of the user with recharts
- * @param  {} {user} general user information.
- * @param  {} {activity} information about weight and calories burned.
- * @param  {} {averageSessions} information on the average duration of sessions.
- * @param  {} {performance} information about calories
+ * @param {user} general user information.
+ * @param {activity} information about weight and calories burned.
+ * @param {averageSessions} information on the average duration of sessions.
+ * @param {performance} information about calories
  * @return a component <Charts {...userData} />
  */
 const Charts = ({
@@ -54,7 +54,7 @@ Charts.propTypes = {
       lastName: PropTypes.string.isRequired,
       age: PropTypes.number.isRequired,
     }),
-    todayScore: PropTypes.number.isRequired,
+    todayScore: PropTypes.number,
     score: PropTypes.number,
     keyData: PropTypes.shape({
       calorieCount: PropTypes.number.isRequired,

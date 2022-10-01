@@ -7,7 +7,7 @@ import GlobalStyles from '../../styles/GlobalStyles';
 
 /**
  * Component showing the page
- * @param  {} {children}
+ * @param {children}
  * @return <Layout></Layout>
  */
 const Layout = ({ children }) => (
@@ -24,5 +24,5 @@ const Layout = ({ children }) => (
 export default Layout;
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.element.isRequired,
 };
